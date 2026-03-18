@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #0f1117;
+    color: #fff;
+    width: 900px;
+    padding: 40px;
+  }
+  .header { text-align: center; margin-bottom: 36px; }
+  .header h1 {
+    font-size: 32px; font-weight: 800;
+    background: linear-gradient(90deg, #7c6cf8, #a78bfa, #60a5fa);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+  }
+  .header p { color: #9ca3af; font-size: 15px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+  .card { background: #1a1d27; border: 1px solid #2d2f3e; border-radius: 14px; padding: 20px; }
+  .card .icon { font-size: 28px; margin-bottom: 10px; }
+  .card h3 { font-size: 15px; font-weight: 700; color: #e5e7eb; margin-bottom: 6px; }
+  .card p { font-size: 13px; color: #9ca3af; line-height: 1.6; }
+  code { color: #60a5fa; }
+  .structure { background: #1a1d27; border: 1px solid #2d2f3e; border-radius: 14px; padding: 20px; margin-bottom: 20px; }
+  .structure h2 { font-size: 15px; font-weight: 700; color: #a78bfa; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 1px; }
+  .file-tree { font-family: 'SF Mono', monospace; font-size: 13px; }
+  .file-row { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 1px solid #23263a; }
+  .file-row:last-child { border-bottom: none; }
+  .file-name { color: #60a5fa; font-weight: 600; min-width: 180px; }
+  .file-desc { color: #9ca3af; font-size: 12px; }
+  .flow { background: #1a1d27; border: 1px solid #2d2f3e; border-radius: 14px; padding: 20px; }
+  .flow h2 { font-size: 15px; font-weight: 700; color: #60a5fa; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 1px; }
+  .steps { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .step { background: #23263a; border-radius: 10px; padding: 10px 14px; font-size: 13px; display: flex; align-items: center; gap: 8px; color: #e5e7eb; }
+  .step .num { background: linear-gradient(135deg, #7c6cf8, #60a5fa); color: white; border-radius: 50%; width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; flex-shrink: 0; }
+  .arrow { color: #4b5563; font-size: 18px; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>🧩 What is an OpenClaw Skill?</h1>
+    <p>A self-contained module that gives your AI agent a new capability</p>
+  </div>
+  <div class="grid">
+    <div class="card"><div class="icon">📦</div><h3>Self-Contained Package</h3><p>A skill is a folder with a <code>SKILL.md</code> at its root. Everything the AI needs to perform a task lives inside — instructions, scripts, references.</p></div>
+    <div class="card"><div class="icon">🧠</div><h3>AI-Readable Instructions</h3><p>The agent reads <code>SKILL.md</code> before acting. It describes what to do, how to do it, what tools to call, and edge cases to handle.</p></div>
+    <div class="card"><div class="icon">🔌</div><h3>Pluggable &amp; Shareable</h3><p>Skills live in <code>~/.openclaw/skills/</code> or your workspace. Install from ClawHub, share with others, or write your own from scratch.</p></div>
+    <div class="card"><div class="icon">🎯</div><h3>Triggered by Context</h3><p>The agent picks the right skill based on your request. Each skill has a <em>description</em> that helps match it to the right situation automatically.</p></div>
+  </div>
+  <div class="structure">
+    <h2>📁 Skill File Structure</h2>
+    <div class="file-tree">
+      <div class="file-row"><span class="file-name">my-skill/</span><span class="file-desc">Root folder — name is the skill ID</span></div>
+      <div class="file-row"><span class="file-name">&nbsp;&nbsp;SKILL.md</span><span class="file-desc">⭐ Core instructions — the agent reads this before acting</span></div>
+      <div class="file-row"><span class="file-name">&nbsp;&nbsp;references/</span><span class="file-desc">Docs, API references, data files the agent can consult</span></div>
+      <div class="file-row"><span class="file-name">&nbsp;&nbsp;scripts/</span><span class="file-desc">Executable helpers the agent can run during a task</span></div>
+      <div class="file-row"><span class="file-name">&nbsp;&nbsp;assets/</span><span class="file-desc">Images, templates, or other supporting files</span></div>
+    </div>
+  </div>
+  <div class="flow">
+    <h2>⚡ How It Works</h2>
+    <div class="steps">
+      <div class="step"><div class="num">1</div>You ask the agent something</div>
+      <div class="arrow">→</div>
+      <div class="step"><div class="num">2</div>Agent scans skill descriptions</div>
+      <div class="arrow">→</div>
+      <div class="step"><div class="num">3</div>Reads matching SKILL.md</div>
+      <div class="arrow">→</div>
+      <div class="step"><div class="num">4</div>Follows the instructions</div>
+      <div class="arrow">→</div>
+      <div class="step"><div class="num">5</div>✅ Task complete</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -13,6 +13,21 @@ Things like:
 - Device nicknames
 - Anything environment-specific
 
+## Gemini API
+
+- **API Key:** `AIzaSyCGMrw7_ezmTTKHbz7CzFKzhZbZQhLF-Dw`
+- **Image generation models:** `imagen-4.0-generate-001` (paid), `gemini-2.5-flash-image` (paid tier)
+- **Free tier text models:** `gemini-2.0-flash`, `gemini-2.5-flash`
+- **Note:** Image generation requires billing enabled at https://ai.dev/projects
+- **Script:** `.tmp/gen_images.py` — generates images via Imagen 4 / Gemini Flash Image
+
+## AgentMail
+
+- **API Key:** `am_us_c133aa641b105571796bc70d60642d230c1da178301ab02d747d415bfea61266`
+- **Primary inbox:** `marco-assistant@agentmail.to`
+- **API base:** `https://api.agentmail.to/v0`
+- Send: `POST /inboxes/{inbox_id}/messages/send`
+
 ## Examples
 
 ```markdown
