@@ -40,6 +40,14 @@ Things like:
 - **API Key:** `BSAcNwac6ozrV46wuBJbA8nFmnjBXxI`
 - **Use:** Web news search for last30days skill
 
+## Mission Control
+
+- **URL:** `http://localhost:3000`
+- **API Key:** `4377667558daf5f6568dc6c5f917e260aa6ca337d93330d6dadcecbcad53ff06`
+- **Auth header:** `x-api-key: <key>`
+- **Agents endpoint:** `POST /api/adapters` (register/heartbeat), `GET /api/agents`
+- **13 agents registered:** seo-email-bot, architect, backend-dev, frontend-dev, strategy-researcher, backtester, paper-trader, risk-analyst, longform-bot, shortform-bot, assistant-bot, daily-brief-bot, breaking-news-bot
+
 ## AgentMail
 
 - **API Key:** `am_us_c133aa641b105571796bc70d60642d230c1da178301ab02d747d415bfea61266`
