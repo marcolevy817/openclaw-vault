@@ -20,6 +20,15 @@ Things like:
 - **Usage:** Primary TTS provider for voice responses
 - **Docs:** https://elevenlabs.io/docs
 
+## Kling AI
+
+- **Access Key:** `A8TKfCFNYbfak3fBYnAEtbFE9MFnT8Yy`
+- **Secret Key:** `PyRHRD39BnnakMQBDRHG9bnrkTgfydtJ`
+- **API base:** `https://api.klingai.com`
+- **Auth:** JWT — sign with Access Key + Secret Key (HS256)
+- **Use:** Text-to-video, image-to-video generation
+- **Docs:** https://docs.klingai.com
+
 ## Gemini API
 
 - **API Key:** `AIzaSyCGMrw7_ezmTTKHbz7CzFKzhZbZQhLF-Dw`

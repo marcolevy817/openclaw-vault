@@ -39,3 +39,5 @@ gog drive delete <FILE_ID> -a marcolevy54@gmail.com
 - longform-bot handles long-form video editing tasks
 - shortform-bot handles short-form + carousel editing tasks
 - Always confirm with Marco before deleting originals if there's any ambiguity
+- **Default behavior:** Stream/temp only — delete all VPS temp files immediately after upload confirms (Option A)
+- Cleanup: `rm -rf /root/.openclaw/workspace/.tmp/video/*` after every edit job
