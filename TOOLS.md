@@ -13,6 +13,13 @@ Things like:
 - Device nicknames
 - Anything environment-specific
 
+## ElevenLabs TTS
+
+- **API Key:** `sk_9e4d45807125e364671bb223e6acb451447baa0134bdb4b4`
+- **Model:** `eleven_turbo_v2_5` (low latency, high quality)
+- **Usage:** Primary TTS provider for voice responses
+- **Docs:** https://elevenlabs.io/docs
+
 ## Gemini API
 
 - **API Key:** `AIzaSyCGMrw7_ezmTTKHbz7CzFKzhZbZQhLF-Dw`
@@ -20,6 +27,18 @@ Things like:
 - **Free tier text models:** `gemini-2.0-flash`, `gemini-2.5-flash`
 - **Note:** Image generation requires billing enabled at https://ai.dev/projects
 - **Script:** `.tmp/gen_images.py` — generates images via Imagen 4 / Gemini Flash Image
+
+## Telegram
+
+- **Bot:** @thedailynewsrobot
+- **Bot token:** `8653241190:AAHnbh54PqCsnYpLaEzJdB8kLLESeJGUdao`
+- **Marco's Telegram user ID:** `8762567109`
+- **Purpose:** Daily 8 AM news briefing (Financial + AI)
+
+## Brave Search
+
+- **API Key:** `BSAcNwac6ozrV46wuBJbA8nFmnjBXxI`
+- **Use:** Web news search for last30days skill
 
 ## AgentMail
 

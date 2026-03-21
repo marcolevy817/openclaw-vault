@@ -1,0 +1,77 @@
+======================================================================
+  QULLAMAGGIE BREAKOUT SCANNER — RESULTS
+  Run Date: 2026-03-19 12:55 ET
+======================================================================
+
+MARKET CONDITIONS
+─────────────────
+  SPY Close:  $661.43
+  SPY SMA50:  $685.35
+  Status:     ⚠️  WEAK (SPY is 3.5% below 50-SMA)
+  Note:       In weak market conditions, position sizes would be halved
+              or entries skipped entirely per config.
+
+UNIVERSE SCAN SUMMARY
+──────────────────────
+  Symbols scanned:         196
+  Passed hard filters:      25  (price ≥$3, dollar vol ≥$500K, ADR% ≥5%)
+  Passed momentum filter:    3  (≥30% move in 21 or 63 days)
+
+MOMENTUM CANDIDATES (passed 30% move filter)
+─────────────────────────────────────────────
+  MU   (Micron Technology)
+  STX  (Seagate Technology)
+  WDC  (Western Digital)
+
+CONSOLIDATION FILTER DROP-OFF
+──────────────────────────────
+  MU  → FAIL: No valid base detected
+        (consolidation window did not meet min 3-day / max 42-day criteria,
+         or the peak/trough pattern didn't qualify as an orderly base)
+
+  STX → FAIL: SMA20 surfing violation
+        (price closed more than 3% below the 20-SMA during consolidation —
+         indicates choppy/broken base, not the tight orderly flag we want)
+
+  WDC → FAIL: No valid base detected
+        (same as MU — no qualifying consolidation structure found)
+
+FINAL WATCHLIST
+───────────────
+  ⛔ NO QUALIFYING SETUPS TODAY
+
+  All three momentum candidates failed the consolidation/base check.
+  This is expected: the scanner has strict requirements for tight,
+  orderly bases with volume dry-up — not all momentum stocks form them.
+
+WHY THIS MAKES SENSE (Context)
+────────────────────────────────
+  - SPY is in correction territory (below 50-SMA by 3.5%)
+  - Semis (MU, STX, WDC) have been in a downtrend / volatile
+  - Qullamaggie explicitly avoids entries in weak market conditions
+  - The strategy is: wait for the right setup + right market = sit in cash
+  - "Being in cash IS a position"
+
+NEXT STEPS
+──────────
+  1. Re-run daily as market conditions improve
+  2. MU and WDC are worth watching — momentum is there, just no base yet
+  3. STX has a surfing violation — needs to repair its structure
+  4. When SPY reclaims its 50-SMA, re-run full scan — more setups will emerge
+  5. Connect Alpaca paper API key (currently returning 401 — verify key at
+     alpaca.markets dashboard) to enable live position monitoring and auto-entry
+
+ALPACA API NOTE
+────────────────
+  The provided key (PKJ237IFEHIRMP700WGNZCULD4) returned 401 Unauthorized
+  on both paper-api.alpaca.markets and api.alpaca.markets.
+  Action required: verify key is active at https://alpaca.markets/dashboard
+  The scanner + all analysis runs fine without it — Alpaca is only needed
+  for live order execution.
+
+======================================================================
+  Script saved at: /root/.openclaw/workspace/qullamaggie_scanner.py
+  Re-run with: python3 qullamaggie_scanner.py
+  Auto-trade:  python3 qullamaggie_scanner.py --trade
+  Positions:   python3 qullamaggie_scanner.py --manage
+======================================================================
