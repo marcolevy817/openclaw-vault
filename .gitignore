@@ -1,0 +1,9 @@
+node_modules/
+__pycache__/
+*.pyc
+.tmp/*.xlsx
+.tmp/*.png
+.tmp/*.pptx
+.tmp/*.py
+.tmp/*.txt
+.tmp/*.log
