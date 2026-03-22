@@ -23,6 +23,7 @@ When a message arrives from a Discord channel, route it to the correct team and 
 | #longform | Longform Bot | 4 |
 | #shortform | Shortform Bot | 8 |
 | #content-calendar | Longform Bot | 4 |
+| #diagrams | Diagrams Bot | 15 |
 
 ## Mission Control Status Protocol
 
